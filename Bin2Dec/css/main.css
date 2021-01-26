@@ -1,0 +1,28 @@
+h1{
+    margin: 20px auto;
+    text-align: center;
+}
+
+form{
+    border-radius: 5px;
+    border: 2px black solid;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 25px;
+}
+
+#resultado_conversion{
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+#valor{
+    font-weight: normal;
+}
+
+.mensaje{
+    display: none;
+    justify-content: center;
+    margin-bottom: 15px;
+    color: red;
+}
