@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/jquery_ver351.min.js"></script>
+    <script src="js/border-controller.js"></script>
+    <title>Border radius prev</title>
+</head>
+
+<body>
+    <header>
+        <h1>Border Radius Previewer</h1>
+    </header>
+    <main>
+        <div id="mainBox">
+            <input type="range" id="bordeA" value="0" class="range blue">
+            <input type="range" id="bordeB" value="0" class="range blue">
+            <input type="range" id="bordeD" value="0" class="range blue">
+            <input type="range" id="bordeC" value="0" class="range blue">
+
+            <!-- Bordes extra -->
+            <input type="range" id="bordeE" value="0" class="range blue fullval">
+            <input type="range" id="bordeH" value="0" class="range blue fullval">
+            <input type="range" id="bordeF" value="0" class="range blue fullval">
+            <input type="range" id="bordeG" value="0" class="range blue fullval">
+        </div>
+    </main>
+    <footer>
+        <div>
+            <span id="proporciones"></span>
+        </div>
+        <button id="copiar" class="boton"><span class="tooltiptext" id="myTooltip">Copiar al portapapeles</span>
+            COPIAR</button>
+        <button class="boton" id="fullVal">8 Valores</button>
+    </footer>
+</body>
+
+</html>
