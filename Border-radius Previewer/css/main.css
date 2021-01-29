@@ -28,11 +28,15 @@ h1{
 
 footer{
     display: grid;
-    grid-template-columns: minmax(240px, 40%) minmax(46px, 9%);
+    grid-template-columns: minmax(420px, 5%) minmax(46px, 9%);
     grid-column-gap: 10px;
     grid-row-gap: 10px;
     justify-content: center;
     margin: 60px 0;
+}
+
+footer button{
+    height: 35px;
 }
 
 footer div{
@@ -45,16 +49,18 @@ footer div{
 
 #proporciones{
     display: block;
-    margin-top: 6px;
-    margin-left: 10px;
-    word-spacing: 10px;
-    font-size: 18px;
+    margin-top: 8px;
+    word-spacing: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
     color: midnightblue;
 }
 
 .boton{
     margin: 0 auto;
     width: 100%;
+    min-width: 150px;
     position: relative;
     display: inline-block;
     border-radius: 7px;
@@ -286,4 +292,10 @@ input[type=range]::-moz-range-thumb {
 
 .fullval{
     display: none;
+}
+
+@media (max-width: 600px){
+    footer{
+        grid-template-columns: 90%;
+    } 
 }
