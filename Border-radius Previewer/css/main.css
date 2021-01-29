@@ -28,7 +28,7 @@ h1{
 
 footer{
     display: grid;
-    grid-template-columns: minmax(420px, 5%) minmax(46px, 9%);
+    grid-template-columns: minmax(420px, 5%) minmax(46px, 12%);
     grid-column-gap: 10px;
     grid-row-gap: 10px;
     justify-content: center;

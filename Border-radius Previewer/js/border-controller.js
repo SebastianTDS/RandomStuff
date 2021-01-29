@@ -117,11 +117,11 @@ $(function () {
         actualizarProps();
 
         if (fullValues) {
-            $('#fullVal').html('4 Valores')
+            $('#fullVal').html('4 VALORES')
             $('.fullval').css('display', 'inline-block')
         }
         else {
-            $('#fullVal').html('8 Valores')
+            $('#fullVal').html('8 VALORES')
             $('.fullval').css('display', 'none')
         }
     })
