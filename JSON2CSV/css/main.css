@@ -1,0 +1,129 @@
+html{
+    height: 100%;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+body{
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-image: radial-gradient(circle at 0% 0%, #373b52, #252736 51%, #1d1e26);
+    background-attachment: fixed;
+}
+
+header{
+    text-align: center;
+    color: white;
+    font-weight: bolder;
+    font-size: 20pt;
+    margin: 40px 0;
+}
+
+.centered{
+    margin: auto;
+}
+
+textarea, p{
+    border: none;
+    display: block;
+    color: white;
+}
+
+.attach{
+    width: 450px;
+    height: 31vw;
+    min-height: 250px;
+    margin: 0 auto;
+}
+
+#JSONwindow, #CSVwindow{
+    resize: none;
+    width: 450px;
+    height: 25vw;
+    min-height: 200px;
+    margin: 0 auto;
+    padding: 15px;
+    background-color: rgba(57, 63, 84, 0.8);      
+    word-wrap: break-word;
+}
+
+#JSONwindow:focus{
+    outline: none;
+}
+
+
+@keyframes gradient{
+    0%{background-position:0 0}
+    100%{background-position:100% 0}
+}
+
+.attach::before{
+    content: "";
+    display: block;
+    position: relative;
+    background-image: linear-gradient(to right, #B294FF, #57E6E6, #FEFFB8, #57E6E6, #B294FF, #57E6E6);;
+    background-size: 500% auto;
+    height: 2px;
+    width: 450px;
+    top: clamp(200px, 25vw, 25vw);
+    animation: gradient 3s linear infinite;
+}
+
+#JSON2CSV{
+    display: block;
+    margin: 9vw auto;
+    width: 90px;
+    height: 90px;
+    border-radius: 100%;
+}
+
+#JSON2CSV img{
+    margin: -6px 0px 0px -11px;
+    width: 100px;
+    height: 100px;
+}
+
+#JSON2CSV:focus{
+    outline: none;
+}
+
+.botones{
+    margin: 10px auto;
+}
+
+.botones button{
+    margin-right: 5px;
+    padding: 5px 15px;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(53, 97, 155);
+}
+
+.botones button:focus{
+    outline: none;
+}
+
+.botones button:hover{
+    background-color: rgb(26, 50, 80);
+}
+
+.botones button:disabled{
+    background-color: rgb(57, 57, 58);
+}
+
+@media (max-width:1199px){
+    #JSON2CSV{
+        margin: 10px auto;
+    }
+
+    .botones{
+        text-align: center;
+    }
+}
+
+@media (max-width:991px){
+    .botones{
+        text-align:left
+    }
+}
