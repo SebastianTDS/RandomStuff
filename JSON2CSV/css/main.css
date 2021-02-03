@@ -68,21 +68,26 @@ textarea, p{
     animation: gradient 3s linear infinite;
 }
 
-#JSON2CSV{
-    display: block;
-    margin: 9vw auto;
+.conversores{
+    text-align: center;
+    margin: 4vw auto;
+}
+
+#JSON2CSV, #CSV2JSON{
+    display: inline-block;
+    margin: 10px auto;
     width: 90px;
     height: 90px;
     border-radius: 100%;
 }
 
-#JSON2CSV img{
+#JSON2CSV img, #CSV2JSON img{
     margin: -6px 0px 0px -11px;
     width: 100px;
     height: 100px;
 }
 
-#JSON2CSV:focus{
+#JSON2CSV:focus, #CSV2JSON:focus{
     outline: none;
 }
 
@@ -114,7 +119,7 @@ textarea, p{
 
 @media (max-width:1199px){
     #JSON2CSV{
-        margin: 10px auto;
+        margin: 10px 10px;
     }
 
     .botones{

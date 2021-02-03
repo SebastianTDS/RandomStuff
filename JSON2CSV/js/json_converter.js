@@ -1,6 +1,4 @@
 $(function () {
-    $('#descargarCSV').attr("disabled", true)
-
     $('#JSON2CSV').click(function () {
         var recived = $('#JSONwindow').val()
 
@@ -33,11 +31,11 @@ $(function () {
                 text += $text
             }
 
+            extensionCheck('.csv')
             $('#CSVwindow').html(text);
-            $('#descargarCSV').attr("disabled", false)
         }
         catch (err) {
-            $('#descargarCSV').attr("disabled", true)
+            $('#descargar').attr("disabled", true)
 
             switch (err.name) {
                 case 'Error':
@@ -52,30 +50,4 @@ $(function () {
             }
         }
     })
-
-    $('#limpiarCSV, #limpiarJSON').click(function (e) {
-        $('.botones #' + e.target.id).parent().siblings(0).val('')
-        $('.botones #' + e.target.id).parent().siblings(0).text('')
-        if(e.target.id == "limpiarCSV") $('#descargarCSV').attr("disabled", true);
-    })
-
-    $('#subirJSON').click(function(){
-        $('.botones input[type=file]').click();
-    })
-
-    $('.botones input[type=file]').change(function(e){
-        const reader = new FileReader();
-        reader.addEventListener('load', (event) => {
-            $('#JSONwindow').val(event.target.result)
-        });
-        reader.readAsText(e.target.files[0]);
-        e.target.value = ''
-    })
-
-    $('#descargarCSV').click(function(){
-        var myBlob = new Blob([$('#CSVwindow').text()], {type: 'application/vnd.ms-excel'});
-        $('#link').attr("href", window.URL.createObjectURL(myBlob))
-        $('#link').attr("download", "conversion.csv")
-    })
-
 })

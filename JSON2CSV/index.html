@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="js/jquery_ver351.min.js"></script>
+    <script src="js/complements.js"></script>
+    <script src="js/csv_converter.js"></script>
     <script src="js/json_converter.js"></script>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/main.css">
@@ -16,29 +18,29 @@
         Conversor de JSON a CSV
     </header>
     <div class="row row-cols-3 justify-content-around">
-        <div class="col-xl-5 col-lg-5 col-12">
+        <div class="col-xl-5 col-lg-6 col-12">
             <div class="attach">
                 <textarea id="JSONwindow"></textarea>
                 <div class="botones">
                     <button id="limpiarJSON">Clear</button>
-                    <button id="subirJSON">Subir JSON</button>
+                    <button id="subirJSON">Cargar CSV/JSON</button>
                     <input type="file" accept=".txt, .json, .csv" style="display: none;" />
                 </div>
             </div>
         </div>
-        <div class="col-xl-1 col-12 order-xl-0 order-last">
-            <button id="JSON2CSV"><img src="resources/Arrow.png"></button>
+        <div class="col-xl-1 col-12 order-0 order-lg-last order-xl-0 conversores">
+            <button id="JSON2CSV"><img src="resources/ArrowCSV.png"></button>
+            <button id="CSV2JSON"><img src="resources/ArrowJSON.png"></button>
         </div>
         <div class="col-xl-5 col-lg-6 col-12">
             <div class="attach">
                 <p id="CSVwindow"></p>
                 <div class="botones">
                     <button id="limpiarCSV">Clear</button>
-                    <a id="link" download="" ><button id="descargarCSV">Descargar</button></a>
+                    <a id="link" download="" ><button id="descargar">Descargar</button></a>
                 </div>
             </div>
         </div>
-
     </div>
 </body>
 
